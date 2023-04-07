@@ -34,7 +34,7 @@ def read_file():
 
 @st.cache_resource
 def get_model():
-    with open(os.path.join("..", "data", "en_US.twitter.txt"), "r", encoding="utf-8") as f:
+    with open(os.path.join("data", "en_US.twitter.txt"), "r", encoding="utf-8") as f:
         data = f.read()
 
     tokenized_data = tokenize_data(data)

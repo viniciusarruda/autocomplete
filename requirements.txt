@@ -1,0 +1,3 @@
+nltk
+streamlit-keyup
+st-annotated-text
