@@ -111,21 +111,18 @@ def main():
         st.session_state["input"], st.session_state["vocabulary"], st.session_state["n_gram_counts_list"]
     )
 
-    st.markdown("---")
-
     if suggestions is not None:
+        st.markdown("---")
         for i in range(5 - 1):
             st.subheader(f"Suggested autocompletion Ngram where N = {i+1}")
             display_annotated_suggestion(suggestions[i])
 
-    st.markdown("---")
-
     if interpolated_suggestions is not None:
+        st.markdown("---")
         st.subheader("Suggested interpolated autocompletion")
         display_annotated_suggestion(interpolated_suggestions)
 
     st.markdown("---")
-
     st.write("Source code [here](https://github.com/viniciusarruda/autocomplete).")
 
 
